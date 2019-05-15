@@ -1,10 +1,8 @@
 /* 百度地图 */
 <template>
-  <div id="map">
+  <div id="map" style="width: 100%; overflow: hidden;">
     <div id="allmap" ref="allmap"></div>
-
-
-<!-- @mousedown="hover(false)"  -->
+    <!-- @mousedown="hover(false)"  -->
 <div class="news" id="news" style="	width: 400px;height: 60px;background-color:rgba(0,0,0,0.75);position: absolute;z-index: 99999;right:10px;top:100px;border:1px solid rgba(255,255,255,0.70)">
     <div  @mouseover="hoverApp(true)"   class="dislocation" style="margin-top:10px;float:left; padding-left:40px;">
         <img src="static/assets/img/suixing.png" style="float:left;">
@@ -58,10 +56,10 @@
           </tr>
         </tbody>
       </table>
-</div>  
+  </div>  
 
 <!--离位枪支--> 
-<div v-show="stateGun || total_g>pageSize_g" class="state" style="width:400px; height:300px; background-color:rgba(0,0,0,0.75); position:absolute; z-index:99999; right:10px; top:166px;border:1px solid rgba(255,255,255,0.70);">
+   <div v-show="stateGun || total_g>pageSize_g" class="state" style="width:400px; height:300px; background-color:rgba(0,0,0,0.75); position:absolute; z-index:99999; right:10px; top:166px;border:1px solid rgba(255,255,255,0.70);">
       <table class="table table-condensed" >
         <thead>
           <tr style="color:#e5e5e5; font-size:14PX; background-color:rgba(36,36,36,0.9); ">
@@ -96,7 +94,6 @@
           </tr>
         </tbody>
       </table>
-</div>
     </div>
   </div>
 </template>
@@ -968,9 +965,7 @@ export default {
 @import "../common/css/paging.css"; /*引入公共样式*/
 
  #allmap {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 880px;margin:0;font-family:"微软雅黑";
  }
 
 .BMap_cpyCtrl {

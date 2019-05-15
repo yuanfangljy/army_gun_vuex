@@ -254,6 +254,7 @@ export default {
     }, */
     closeTime(){
       $("#myModal").modal("hide")
+       this.$router.push('/map')
     },
     submitTime(){
       let _this=this;
